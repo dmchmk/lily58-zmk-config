@@ -28,6 +28,8 @@
 &kp LSHFT   &kp Z   &kp X   &kp C      &kp V     &kp B          &kp LBKT     &kp RBKT   &kp N            &kp M   &kp COMMA      &kp DOT  &kp FSLH  &mo 1
                             &kp LCTRL  &kp LALT  &kp LEFT_META  &kp ENTER    &kp SPACE  &kp RIGHT_SHIFT  &mo 2   &kp BACKSPACE
             >;
+
+            label = "mac";
         };
 
         lower_layer {
@@ -74,6 +76,8 @@
 &trans  &trans  &trans  &trans         &trans        &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
                         &kp LEFT_META  &kp LEFT_ALT  &kp LCTRL  &trans    &trans  &trans  &trans  &trans
             >;
+
+            label = "win";
         };
     };
 };
