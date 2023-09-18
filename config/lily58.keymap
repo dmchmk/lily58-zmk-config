@@ -17,11 +17,13 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <18 19>;
             layers = <0>;
+            timeout-ms = <80>;
         };
 
         delete {
             bindings = <&kp DELETE>;
             key-positions = <19 20>;
+            timeout-ms = <80>;
         };
     };
 
