@@ -15,15 +15,16 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <18 19>;
-            layers = <0>;
+            key-positions = <31 32>;
+            layers = <0 3 4>;
             timeout-ms = <80>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <19 20>;
+            key-positions = <31 30>;
             timeout-ms = <80>;
+            layers = <0 3 4>;
         };
     };
 
