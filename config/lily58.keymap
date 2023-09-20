@@ -15,16 +15,15 @@
 
         backspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <31 32>;
-            layers = <0 3 4>;
+            key-positions = <18 19>;
+            layers = <0>;
             timeout-ms = <80>;
         };
 
         delete {
             bindings = <&kp DELETE>;
-            key-positions = <31 30>;
+            key-positions = <19 20>;
             timeout-ms = <80>;
-            layers = <0 3 4>;
         };
     };
 
@@ -40,17 +39,17 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp GRAVE   &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                                 &kp N6           &kp N7  &kp N8         &kp N9   &kp N0    &kp RBKT
-&kp TAB     &kp Q   &kp W   &kp E      &kp R     &kp T                                  &kp Y            &kp U   &kp I          &kp O    &kp P     &kp LBKT
-&kp ESCAPE  &kp A   &kp S   &kp D      &kp F     &kp G                                  &kp H            &kp J   &kp K          &kp L    &kp SEMI  &kp SQT
-&kp LSHFT   &kp Z   &kp X   &kp C      &kp V     &kp B          &kp MINUS    &kp EQUAL  &kp N            &kp M   &kp COMMA      &kp DOT  &kp FSLH  &mo 1
-                            &kp LCTRL  &kp LALT  &kp LEFT_META  &kp ENTER    &kp SPACE  &kp RIGHT_SHIFT  &mo 2   &kp BACKSPACE
+&kp GRAVE   &kp N1  &kp N2  &kp N3     &kp N4    &kp N5                                 &kp N6           &kp N7  &kp N8     &kp N9   &kp N0    &kp RBKT
+&kp TAB     &kp Q   &kp W   &kp E      &kp R     &kp T                                  &kp Y            &kp U   &kp I      &kp O    &kp P     &kp LBKT
+&kp ESCAPE  &kp A   &kp S   &kp D      &kp F     &kp G                                  &kp H            &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT   &kp Z   &kp X   &kp C      &kp V     &kp B          &kp MINUS    &kp EQUAL  &kp N            &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp BACKSPACE
+                            &kp LCTRL  &kp LALT  &kp LEFT_META  &kp ENTER    &kp SPACE  &kp RIGHT_SHIFT  &mo 2   &mo 1
             >;
 
             label = "mac";
         };
 
-        lower_layer {
+        fn2 {
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1 | BT2 |  BT3 |  BT4 |  BT5 |                   |      |       |       |      |       |       |
             // |  F1   |  F2 |  F3 |  F4  |  F5  |  F6  |                   |  F7  |  F8   |  F9   |  F10 |  F11  |  F12  |
@@ -59,17 +58,17 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0      &bt BT_SEL 1       &bt BT_SEL 2       &bt BT_SEL 3  &bt BT_SEL 4                    &to 0      &to 3      &to 4            &trans    &trans    &trans
-&kp F1      &kp F2            &kp F3             &kp F4             &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL          &kp AT             &kp HASH           &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                                 &trans             &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&bt BT_CLR         &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3          &bt BT_SEL 4                             &to 0      &to 3      &to 4            &trans    &trans    &trans
+&ext_power EP_ON   &trans        &kp EXCLAMATION  &kp AT        &kp HASH              &trans                                   &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
+&ext_power EP_OFF  &trans        &kp DOLLAR       &kp PERCENT   &kp CARET             &trans                                   &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
+&ext_power EP_TOG  &trans        &kp AMPERSAND    &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
+                                                  &trans        &trans                &trans                 &trans    &trans  &trans     &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            label = "fn2";
         };
 
-        raise_layer {
+        fn1 {
             // ------------------------------------------------------------------------------------------------------------
             // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
             // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |   7   |   8   |  9   |   0   |       |
@@ -78,12 +77,14 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&trans     &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans   &trans   &trans                     &trans    &trans         &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
-&kp GRAVE  &kp N1                &kp N2                &kp N3   &kp N4   &kp N5                     &kp N6    &kp N7         &kp N8      &kp N9             &kp N0           &trans
-&kp F1     &kp F2                &kp F3                &kp F4   &kp F5   &kp F6                     &kp LEFT  &kp DOWN       &kp UP      &kp RIGHT          &trans           &trans
-&kp F7     &kp F8                &kp F9                &kp F10  &kp F11  &kp F12  &trans    &trans  &kp PIPE  &kp BACKSLASH  &kp PLUS    &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp BSLH
-                                                       &trans   &trans   &trans   &trans    &trans  &trans    &trans         &trans
+&trans  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans        &trans        &trans                          &trans    &trans         &kp C_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans
+&trans  &trans                &kp NUMBER_1          &kp NUMBER_2  &kp NUMBER_3  &trans                          &trans    &trans         &trans      &trans             &trans           &trans
+&trans  &trans                &kp NUMBER_4          &kp NUMBER_5  &kp NUMBER_6  &kp DOT                         &kp LEFT  &kp DOWN       &kp UP      &kp RIGHT          &trans           &trans
+&trans  &trans                &kp NUMBER_7          &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans    &trans  &kp PIPE  &kp BACKSLASH  &kp PLUS    &kp LEFT_BRACE     &kp RIGHT_BRACE  &kp BSLH
+                                                    &trans        &trans        &trans        &trans    &trans  &trans    &trans         &trans
             >;
+
+            label = "fn1";
         };
 
         win {
