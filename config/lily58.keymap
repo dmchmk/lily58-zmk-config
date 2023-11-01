@@ -17,14 +17,16 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <31 32>;
             layers = <0 3 4>;
-            timeout-ms = <80>;
+            slow-release;
+            require-prior-idle-ms = <70>;
         };
 
         delete {
             bindings = <&kp DELETE>;
             key-positions = <31 30>;
-            timeout-ms = <80>;
             layers = <0 3 4>;
+            slow-release;
+            require-prior-idle-ms = <70>;
         };
     };
 
