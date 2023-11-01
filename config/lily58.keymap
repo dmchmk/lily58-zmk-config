@@ -18,7 +18,7 @@
             key-positions = <31 32>;
             layers = <0 3 4>;
             slow-release;
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <50>;
         };
 
         delete {
@@ -26,7 +26,7 @@
             key-positions = <31 30>;
             layers = <0 3 4>;
             slow-release;
-            require-prior-idle-ms = <70>;
+            require-prior-idle-ms = <50>;
         };
     };
 
