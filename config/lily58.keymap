@@ -31,7 +31,7 @@
 
         escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <27 26>;
+            key-positions = <28 29>;
             require-prior-idle-ms = <50>;
             slow-release;
             layers = <0 3 4>;
