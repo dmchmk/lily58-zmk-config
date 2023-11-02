@@ -28,6 +28,14 @@
             slow-release;
             require-prior-idle-ms = <50>;
         };
+
+        escape {
+            bindings = <&kp ESCAPE>;
+            key-positions = <27 26>;
+            require-prior-idle-ms = <50>;
+            slow-release;
+            layers = <0 3 4>;
+        };
     };
 
     keymap {
